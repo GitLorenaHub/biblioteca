@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>RESERVA DE LIBROS BIBLIOTECA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div>Bienvenidos, ¿qué libro va a leer hoy?</div>
+        <h3>Prestamo de Libros</h3>
+        <form>
+            Fecha<br>
+            <script>
+                var f = new Date();
+                document.write(f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
+            </script>
+            <br>
+            Numero<br>
+            <input type="text" name="text" id="numero">
+            <br>
+            Nombre<br>
+            <input type="text" name="nombre" id="nombre">
+            <br>
+            DNI <br>
+            <input type="text" name="text" id="numero">
+            <br>
+            Titulo<br>
+            <select id="titulo">
+                <option id="1">C. Sociales</option>
+                <option id="2">C. Naturales</option>
+                <option id="3">C. Exactas</option>
+                <option id="4">Otras</option>
+            </select>
+            <br>
+            Fecha de devolución:<br>
+            <select id="dia" name="dia">
+                <script>
+                    for (var x = 0; x < 31; x++) {
+                        document.write("<option>" + parseInt(x + 1) + "</option>");
+                    }
+                </script>
+            </select>
+            <select id="mes" name="mes"> 
+                <script>
+                    for (var x = 0; x < 12; x++) {
+                        document.write("<option>" + parseInt(x + 1) + "</option>");
+                    }
+                </script>
+            </select>
+            <select id="anio" name="anio">
+                <script>
+                    for (var x = 0; x < 50; x++) {
+                        document.write("<option>" + parseInt(x + 1971) + "</option>");
+                    }
+                </script>
+            </select>
+        </form>
+    </body>
+</html>
